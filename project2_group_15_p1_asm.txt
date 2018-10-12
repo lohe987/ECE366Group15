@@ -1,0 +1,41 @@
+addi $8, $0, 1
+addi $12, $0, 0x2000
+sw  $8, 4($12)
+addi $10, $0, 6
+lw  $15, 0($12)
+addi $12, $0, 17
+beq  $15, $0, ExponentZero
+andi $11, $15, 1
+beq  $11, $0, Continue
+add $14, $8, $0
+add $13, $10, $0
+jal Multiplication
+add $8, $18,$0
+add $14, $10, $0
+add $13, $10, $0
+jal Multiplication
+add $10, $18, $0
+jal Modulus
+srl $15, $15, 1
+j MainLoop
+addi $18, $0, 0
+beq  $14, $0, ReturnToPrevious
+beq  $13, $0, ReturnToPrevious
+add $18, $18, $14
+addi $13, $13, -1
+j SecondaryLoop
+add $10, $0, $8
+jal Modulus
+addi $15, $0, 0x2004
+sw  $10, 0($15)
+j EXIT
+add $10, $0, $8
+jal Modulus
+addi $15, $0, 0x2004
+sw  $10, 0($15)
+j EXIT
+jr  $31
+slt $11, $10, $12
+bne $11, $0, ReturnToPrevious
+addi $10, $10, -17
+j Modulus
