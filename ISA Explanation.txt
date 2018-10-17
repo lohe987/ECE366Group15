@@ -1,4 +1,0 @@
-Our ISA is designed based on the number of different instructions we have. We have a total of 69 different instructions represented by their decimal value from 0-68.
-We could not break our ISA into a simpler form due to the number of instructions and registers used. A revision of our 1st and 2nd progam would be needed to create
-a simpler and more efficient ISA but due to lack of time and resources, we were forced to hard program our machine code. The best we got to creating a ISA pattern 
-was arranging the instructions alphabetically. Then we arranged them by which used immediates, registers, memory, etc. 
