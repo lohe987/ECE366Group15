@@ -19,7 +19,7 @@ Decimal Value	Machine Code	Instruction		Explanation
 9		1001		add $18, $18, $14		# We add the value $14 to the register $18
 10		1010		addi $8, $0, 1	
 11		1011		addi $10, $0, 6			# constant 6 is loaded into register 10
-12		1100		addi $11, $0, 20		# We store the number of words in the array, usfeul for oops
+12		1100		addi $11, $0, 20		# We store the number of words in the array, useful for loops
 13		1101		addi $10, $10, -17	
 14		1110		addi $11, $11, -1	
 15		1111		addi $12, $0, 0x2000		# Load the data address in $12 useful for loading operands
@@ -36,7 +36,7 @@ Decimal Value	Machine Code	Instruction		Explanation
 26		11010		addi $17, $15, 0xC		# address of the array is stored in $17
 27		11011		addi $17, $17, 4		# Move to the next position in the array
 28		11100		addi $17, $0, 0x2004	
-29		11101		addi $17, $0, 0x205C		# Here we save start address of score array in $
+29		11101		addi $17, $0, 0x205C		# Here we save start address of score array in $17
 30		11110		addi $17, $0, 0x2008		# We recover the given address to store result
 31		11111		addi $18, $0, 0	
 32		100000		andi $11, $15, 1		# If not: it gets lowest bit value by andi operation between $15 and 1
@@ -52,7 +52,7 @@ Decimal Value	Machine Code	Instruction		Explanation
 42		101010		bne $15, $0, LoopWords	
 43		101011		bne $10, $16, NextStep		# If it is lower, then nothing will happen
 44		101100		j MainLoop			# Jump to Mainloop
-45		101101		j SecondaryLoop			# We keep goint until $13 is zero
+45		101101		j SecondaryLoop			# We keep going until $13 is zero
 46		101110		j EXIT	
 47		101111		j Modulus			# Keep calculating modulus
 48		110000		j Hamming			# Keep looping
