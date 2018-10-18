@@ -1,8 +1,8 @@
 # Disassembler for project 2
 #This code works for both program 1 and 2
 
-input_file = open("MachineCodeProgram2.txt", "r")
-output_file = open("project2_group_15_p2_asm.txt", "w")
+input_file = open("project2_group_15_p1_bin.txt.txt", "r")
+output_file = open("project2_group_15_p1_asm.txt", "w")
 
 for line in input_file: 
     if(line[0:7] == "0000000"):
